@@ -1,1 +1,115 @@
-hello
+<!doctype html>
+<html>
+
+<head>
+    <title>Krzysztof Kołek</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <hgroup>
+            <h1>Hello I'm Kris</h1>
+            <h2>I <3 .Net</h2>
+        </hgroup>
+    </header>
+
+    <section class="demo">
+        <div id="main-container" class="card card-3">
+            <dl class="list nigiri">
+                <dd id="image"><img src="./static/foto.png">
+                </dd>
+                <dd><a href="#">Krzysztof Kołek</a>
+                </dd>
+                <dd><a href="#">.Net / Web</a>
+                </dd>
+                <dd><a href="#">Gliwice</a>
+                </dd>
+                <dd><a href="#">(+48) 669 444 981</a>
+                </dd>
+                <dd><a href="#">krzysztof.kolek.praca@gmail.com</a>
+                </dd>
+            </dl>
+
+            <dl class="list maki project-description">
+                <dt>Current projects</dt>
+                <dd><a href="https://github.com/krzysztofkolek/color-map">Color map</a>
+                </dd>
+                <dd><a href="https://github.com/krzysztofkolek/AdventureWorksAPI">AdventureWorksAPI</a>
+                </dd>
+                <dd><a href="https://github.com/krzysztofkolek/NorthwindWindowsStore">Northwind Windows Store</a>
+                </dd>
+                <dd><a href="https://github.com/krzysztofkolek/ng-shop">ng-shop</a>
+                </dd>
+                <dd><a href="https://github.com/krzysztofkolek/NorthwindGenericGUI">NorthwindGenericGUI</a>
+                </dd>
+            </dl>
+
+            <dl class="list sashimi">
+                <dt>Technologies I use</dt>
+                <dd>ASP.Net</dd>
+                <dd>WinForms</dd>
+                <dd>WPF</dd>
+                <dd>Nancy</dd>
+                <dd>Telerik</dd>
+                <dd>JavaScript</dd>
+                <dd>jQuery</dd>
+                <dd>Angular</dd>
+                <dd>Aurelia</dd>
+            </dl>
+
+
+        </div>
+    </section>
+
+    <div class="warning">
+        <div class="message">
+            <h1>CSS 3D Not Detected :(</h1>
+        </div>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="js/makisu.js"></script>
+    <script>
+        if ($.fn.makisu.enabled) {
+
+            var $sashimi = $('.sashimi');
+            var $nigiri = $('.nigiri');
+            var $maki = $('.maki');
+
+            // Create Makisus
+
+            $nigiri.makisu({
+                selector: 'dd',
+                overlap: 0.85,
+                speed: 1.7
+            });
+
+            $maki.makisu({
+                selector: 'dd',
+                overlap: 0.6,
+                speed: 0.85
+            });
+
+            $sashimi.makisu({
+                selector: 'dd',
+                overlap: 0.2,
+                speed: 0.5
+            });
+
+            $('.list').makisu('open');
+
+            $('.demo a').click(function(event) {
+                //event.preventDefault();
+            });
+
+        } else {
+
+            $('.warning').show();
+        }
+    </script>
+</body>
+
+</html>
